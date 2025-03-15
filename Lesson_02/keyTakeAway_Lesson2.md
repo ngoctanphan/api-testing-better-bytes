@@ -21,7 +21,7 @@
 
 **Server**: Người nhận API → trả về **response**
 
-🔸 **HTTP Method**
+🔸 **1. HTTP Method**
 
 | **Method** | **Định nghĩa** | **Ví dụ sử dụng** | **Body** | **Idempotent** | **Safe** |
 | --- | --- | --- | --- | --- | --- |
@@ -37,7 +37,7 @@
 
 ---
 
-🔸 **URL/Endpoint Structure**
+🔸 **2. URL/Endpoint Structure**
 
 - Example:  https://api.example.com/v1/users?status=active&sort=asc#section2
 - Scheme: https
@@ -51,13 +51,13 @@
 
 ---
 
-🔸 **Header**
+🔸 **3. Header**
 
 - Chứa **metadata** về request, như loại dữ liệu, xác thực, mã hóa, v.v.
 
 ---
 
-🔸 **Body**
+🔸 **4. Body**
 
 - Dữ liệu chính được gửi trong request (đặc biệt với **POST, PUT, PATCH**).
 
