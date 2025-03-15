@@ -1,13 +1,13 @@
-# **📚 Lesson 01: API Fundamentals**
+## **📚 Lesson 01: API Fundamentals**
 
-## ✅ **API - Application Programming Interface**
+### ✅ **API - Application Programming Interface**
 
 - Giúp các hệ thống **nhận và trao đổi dữ liệu** với nhau.
 - 👉 **Tăng tốc độ hoạt động** và đảm bảo các hệ thống **hoạt động độc lập** hơn.
 
 ---
 
-## 🛠️ **Tại sao cần Test API?**
+### 🛠️ **Tại sao cần Test API?**
 
 1. ✅ **Đảm bảo dữ liệu chính xác** như mong đợi.
 2. 🐞 **Phát hiện lỗi sớm**, giảm rủi ro trong quá trình phát triển.
@@ -16,7 +16,7 @@
 
 ---
 
-## 🔍 **Các hình thức Test API phổ biến**
+### 🔍 **Các hình thức Test API phổ biến**
 
 - **✅ Functional Testing**: Kiểm tra chức năng và tính chính xác của API.
 - **⚡ Load Testing**: Đánh giá khả năng chịu tải và hiệu suất của API.
@@ -25,7 +25,7 @@
 
 ---
 
-## 🌐 **Các loại Web APIs**
+### 🌐 **Các loại Web APIs**
 
 1. **🔄 REST API**
     - Giao tiếp thông qua **HTTP**.
@@ -41,7 +41,7 @@
 
 ---
 
-## 📝 **Định dạng dữ liệu phổ biến**
+### 📝 **Định dạng dữ liệu phổ biến**
 
 ### ✅ **XML - eXtensible Markup Language**
 
@@ -61,7 +61,7 @@
 
 ---
 
-# 🚀 **Hướng dẫn Set-up và Push Code lên GitHub**
+### 🚀 **Hướng dẫn Set-up và Push Code lên GitHub**
 
 ### 1. **Cài đặt Git**
 
