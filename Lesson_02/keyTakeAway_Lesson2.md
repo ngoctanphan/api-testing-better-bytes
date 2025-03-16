@@ -53,7 +53,7 @@
 
 🔸 **3. Header**
 
-- Chứa **metadata** về request, như loại dữ liệu, xác thực, mã hóa, v.v.
+- Chứa metadata, bao quát về nội dung trong body → hỗ trợ xác định, định dạng dữ liệu và phân loại request/response tốt hơn.
 
 ---
 
@@ -69,7 +69,6 @@
 2. **Header** → Thông tin về dữ liệu phản hồi.
 3. **Body** → Nội dung chính được trả về từ server.
 
----
 
 ### 📦 **6. Header API**
 
