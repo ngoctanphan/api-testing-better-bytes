@@ -1,0 +1,12 @@
+- Collection: tập hợp các request có thể sử dụng lại
+- Environment: Nơi tạo biến môi trường có thể sử dụng lại trong collection
+- Checklist cho một API testcase:
+    - Functional Testing
+    - Status Codes
+    - Data Validation
+    - Authentication/ Authorization
+    - Performance
+    - Security: XSS, CORS, SQLi(njection)
+    - Edge Cases
+    - Compatibility
+- Javascript Loop: Vòng lặp trong JS

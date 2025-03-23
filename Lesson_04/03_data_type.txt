@@ -1,0 +1,27 @@
+1. Viết dưới dạng JSON
+{
+    "Planet": {
+        "name": "Kepler-22b",
+        "distance": 587,
+        "survived": true,
+        "visitedCountry": ["Việt Nam" , "Campuchia" , "Thái Lan"]
+    }
+}
+
+2. Viết dưới dạng XML
+<planet>
+    <name>Kepler-22b</name>
+    <distance>587</distance>
+    <survived>true</survived>
+    <visitedCountry>
+        <country>Việt Nam</country>
+        <country>Campuchia</country>
+        <country>Thái Lan</country>
+    </visitedCountry>
+</planet>
+
+3. JSON tối ưu hơn XML vì:
+    - JSON ngắn gọn hơn XML do không cần thẻ đóng và mỏ
+    - Cú pháp và dữ liệu của JSON dễ đọc, dễ hiểu, trực quan hơn 
+    - JSON hỗ trợ nhiều kiểu dữ liệu như số, boolean, mảng mà XML không có
+    - Tốc độ xử lý của JSON nhanh hơn, kích thước file nhẹ hơn

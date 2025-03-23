@@ -1,0 +1,807 @@
+{
+	"info": {
+		"_postman_id": "0eeaa417-d3b6-4e96-b5ab-b49317427e86",
+		"name": "Lesson 04 - API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28856122"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authors",
+			"item": [
+				{
+					"name": "Create a new author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"ngoctan\",\r\n  \"description\": \"testing API\",\r\n  \"birthDate\": \"2025-03-22T12:03:27.467Z\",\r\n  \"deathDate\": \"2025-03-22T12:03:27.467Z\",\r\n  \"nationality\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an author by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors/7",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an author",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ryan Testing\",\r\n  \"description\": \"string\",\r\n  \"birthDate\": \"2025-03-22T12:06:27.417Z\",\r\n  \"deathDate\": \"2025-03-22T12:06:27.417Z\",\r\n  \"nationality\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors/7",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors/7",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "Create a new book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"The Great Gatsby\",\r\n  \"description\": \"A novel by F. Scott Fitzgerald\",\r\n  \"publishedYear\": 1925,\r\n  \"imageUrl\": \"https://example.com/book-cover.jpg\",\r\n  \"collectionId\": 1,\r\n  \"authorId\": 1,\r\n  \"languageId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/books",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all book with pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/books",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"The Great Gatsby by Ryan Testing\",\r\n  \"description\": \"A novel by F. Scott Fitzgerald\",\r\n  \"publishedYear\": 1925,\r\n  \"imageUrl\": \"https://example.com/book-cover.jpg\",\r\n  \"collectionId\": 1,\r\n  \"authorId\": 1,\r\n  \"languageId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "collections",
+			"item": [
+				{
+					"name": "Create a new collection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Tan collection\",\r\n  \"description\": \"string 123\",\r\n  \"imageUrl\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/collections",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"collections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all collections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/collections",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"collections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a collection by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/collections/31",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"collections",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a collection",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ryan update collection\",\r\n  \"description\": \"string\",\r\n  \"imageUrl\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/collections/31",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"collections",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a collection",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/collections/31",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"collections",
+								"31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "languages",
+			"item": [
+				{
+					"name": "Create a new language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"English\",\r\n  \"description\": \"English language books\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/languages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/languages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a language by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/languages/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"languages",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a language",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"English 1\",\r\n  \"description\": \"English language books\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/languages/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"languages",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a language",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/languages/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"languages",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "Create a new review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 5,\r\n  \"content\": \"string\",\r\n  \"userId\": 0,\r\n  \"bookId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a review by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/reviews/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 5,\r\n  \"content\": \"string\",\r\n  \"userId\": 0,\r\n  \"bookId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/reviews/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/reviews/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create a new user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGJldHRlcmJ5dGVzdm4uY29tIiwic3ViIjo3LCJyb2xlIjoxLCJpYXQiOjE3NDI2NDQ1NDIsImV4cCI6MTc0NTIzNjU0Mn0.fUrf3eb13ax3WheMEJkvcleHc1uR0nI38Z5VMaHBAqw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"username\": \"johndoe132\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"user\",\r\n  \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/users/11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/users/11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/users/11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGJldHRlcmJ5dGVzdm4uY29tIiwic3ViIjo3LCJyb2xlIjoxLCJpYXQiOjE3NDI2NDQ1NDIsImV4cCI6MTc0NTIzNjU0Mn0.fUrf3eb13ax3WheMEJkvcleHc1uR0nI38Z5VMaHBAqw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
